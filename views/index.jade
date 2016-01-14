@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h2 Welcome to WebriQ 4!
+  :markdown
+    Find tutorials and documentation at http://roots.cx : )
+
+  // Once you've added a content type and posts into Contentful
+  // go update your app.coffee config and then test out iterating
+  // over your content type here!
+
+  h3 Blog Updates:
+
+  p NOTE: This is blog post generated from 'contentful', please click on the title to view the full page.
+  ul.list-unstyled
+    - for post in contentful.posts
+      li
+        h4: a(href= post._url)= post.title
+        p= post.date
+        img(src= asset(entry.image))
+
+
