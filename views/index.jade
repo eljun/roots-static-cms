@@ -12,11 +12,14 @@ block content
   h3 Blog Updates:
 
   p NOTE: This is blog post generated from 'contentful', please click on the title to view the full page.
-  ul.list-unstyled
+  div.row
     - for post in contentful.posts
-      li
-        h4: a(href= post._url)= post.title
-        p= post.date
-        img(src= asset(entry.featuredImage))
+      div.col-sm-3
+        div.thumbnail
+          img(src= asset(entry.featuredImage)).img-responsive
+          div.caption
+            h4: a(href= post._url)= post.title
+            p= post.date
+            a(href= post._url).btn.btn-primary more
 
 

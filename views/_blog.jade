@@ -1,5 +1,8 @@
-h4= entry.title
-img(src= asset(entry.image))
-p= entry.date
-!= marked(entry.body)
-a(href= "/").btn.btn-primary go back
+extends layout
+
+block content
+	h4= entry.title
+	img(src= asset(entry.image))
+	p= entry.date
+	!= marked(entry.body)
+	a(href= "/").btn.btn-primary go back
