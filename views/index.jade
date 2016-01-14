@@ -16,10 +16,8 @@ block content
     - for post in contentful.posts
       div.col-sm-3
         div.thumbnail
-          img(src= asset(entry.featuredImage)).img-responsive
+          img(src= asset(post.featuredImage)).img-responsive
           div.caption
             h4: a(href= post._url)= post.title
             p= post.date
             a(href= post._url).btn.btn-primary more
-
-
