@@ -21,3 +21,8 @@ block content
             h4: a(href= post._url)= post.title
             p= post.date
             a(href= post._url).btn.btn-primary Read more
+
+  button(onclick='screen.orientation.unlock()') Unlock
+  button(onclick="screen.orientation.lock('portrait')") Lock to portrait
+  button(onclick="screen.orientation.lock('landscape')") Lock to landscape
+

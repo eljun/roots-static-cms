@@ -1,18 +1,7 @@
-var start = function() {
-    screen.orientation.lock('landscape-primary').then(
-      startInternal,
-      function() {
-        alert('To start, rotate your screen to landscape.');
-
-        var orientationChangeHandler = function() {
-          if (!screen.orientation.type.startsWith('landscape')) {
-            return;
-          }
-          screen.orientation.removeEventListener('change', orientationChangeHandler);
-          startInternal();
-        }
-
-        screen.orientation.addEventListener('change', orientationChangeHandler);
-      });
+var show = function() {
+     console.log("Orientation type is " + screen.orientation.type);
+     console.log("Orientation angle is " + screen.orientation.angle);
   }
-  window.onload = start;
+
+  screen.orientation.addEventListener("change", show);
+  window.onload = show;
