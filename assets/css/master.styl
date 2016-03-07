@@ -42,13 +42,14 @@ body
 
 
 
-@media screen and (orientation:portrait)
+@media (min-width: 700px) and (orientation:portrait)
   body
     background red !important
+    overflow hidden
   .portrait-error
     display block
 
-@media screen and (orientation:landscape)
+@media (min-width: 700px) and (orientation:landscape)
   body
     background blue !important
   .portrait-error
